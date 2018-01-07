@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSutie]">
+  <test name="NewHomePage(failed)">
+    <classes>
+      <class name="BasePackage.BaseClass">
+        <methods>
+          <include name="launchAUTApplication"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- BasePackage.BaseClass -->
+      <class name="Checks.DeleteBanner">
+        <methods>
+          <include name="vvv"/>
+        </methods>
+      </class> <!-- Checks.DeleteBanner -->
+    </classes>
+  </test> <!-- NewHomePage(failed) -->
+</suite> <!-- Failed suite [RegressionSutie] -->

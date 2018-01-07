@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegressionSutie" duration-ms="14363" started-at="2018-01-07T07:28:04Z" finished-at="2018-01-07T07:28:18Z">
+    <groups>
+    </groups>
+    <test name="NewHomePage" duration-ms="14363" started-at="2018-01-07T07:28:04Z" finished-at="2018-01-07T07:28:18Z">
+      <class name="BasePackage.BaseClass">
+        <test-method status="PASS" signature="launchAUTApplication()[pri:0, instance:BasePackage.BaseClass@1a968a59]" name="launchAUTApplication" is-config="true" duration-ms="15356" started-at="2018-01-07T12:57:48Z" finished-at="2018-01-07T12:58:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchAUTApplication -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:BasePackage.BaseClass@1a968a59]" name="cleanUp" is-config="true" duration-ms="2117" started-at="2018-01-07T12:58:18Z" finished-at="2018-01-07T12:58:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- BasePackage.BaseClass -->
+      <class name="Checks.DeleteBanner">
+        <test-method status="PASS" signature="vvv()[pri:0, instance:Checks.DeleteBanner@4667ae56]" name="vvv" duration-ms="14338" started-at="2018-01-07T12:58:04Z" finished-at="2018-01-07T12:58:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vvv -->
+      </class> <!-- Checks.DeleteBanner -->
+    </test> <!-- NewHomePage -->
+  </suite> <!-- RegressionSutie -->
+</testng-results>
