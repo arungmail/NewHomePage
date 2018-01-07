@@ -20,16 +20,17 @@ public class AddBanner extends DriverClass{
 	public void login () throws InterruptedException{
 		JavascriptExecutor javascript = (JavascriptExecutor) driver;
 		javascript.executeScript("alert('Test Case Execution Is started Now..');");
-		driver.findElement(ele.Email).sendKeys(input.email);
-		driver.findElement(ele.Password).sendKeys(input.password);
-		driver.findElement(ele.SignInButton).click();
 		try{   
 			   driver.switchTo().alert().dismiss();  
 			  }catch(Exception e){ 
 			   System.out.println("unexpected alert not present");   
 			  }
 		Thread.sleep(5000);
-	}
+	
+		driver.findElement(ele.Email).sendKeys(input.email);
+		driver.findElement(ele.Password).sendKeys(input.password);
+		driver.findElement(ele.SignInButton).click();
+}
 	
 	@Test(priority=2)
 	
@@ -376,8 +377,6 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(bannerType, "Ads (Expandable - 1075 x 400 and small ads - 385x190 )");
 		driver.findElement(ele.URL).sendKeys("www.wimindia.in");
 		util.selectValueByVisibleText(target, "New Tab");
-		driver.findElement(ele.ButtonURL).sendKeys("www.swimindia.in");
-		driver.findElement(ele.ButtonText).sendKeys(input.FirstBannerText);
 		driver.findElement(ele.ExpandableURL).sendKeys("www.swimindia.in");
 		driver.findElement(ele.ExpandableText).sendKeys("Test");
 		driver.findElement(ele.ExpandaImageUploadButton).click();
@@ -406,8 +405,6 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(bannerType, "Ads (Expandable - 1075 x 400 and small ads - 385x190 )");
 		driver.findElement(ele.URL).sendKeys("www.wimindia.in");
 		util.selectValueByVisibleText(target, "New Tab");
-		driver.findElement(ele.ButtonURL).sendKeys("www.swimindia.in");
-		driver.findElement(ele.ButtonText).sendKeys(input.FirstBannerText);
 		driver.findElement(ele.ExpandableURL).sendKeys("www.swimindia.in");
 		driver.findElement(ele.ExpandableText).sendKeys("Test");
 		driver.findElement(ele.ExpandaImageUploadButton).click();

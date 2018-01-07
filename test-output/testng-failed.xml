@@ -9,22 +9,13 @@
           <include name="cleanUp"/>
         </methods>
       </class> <!-- BasePackage.BaseClass -->
-      <class name="Checks.AddBanner">
+      <class name="Checks.DeleteBanner">
         <methods>
-          <include name="addBannerWithButton"/>
-          <include name="addThirdFooterAd"/>
-          <include name="addSecondMashaBanner"/>
-          <include name="addFirstInsideAd"/>
-          <include name="addSecondCommercialAd"/>
-          <include name="addFullVideo"/>
-          <include name="addSecondAdWithoutExpandable"/>
-          <include name="addFirstExpandableAd"/>
-          <include name="addFirstPartner"/>
-          <include name="addStatistics"/>
-          <include name="addStanderedVideo"/>
-          <include name="addGallery"/>
+          <include name="deleteGallery"/>
+          <include name="deleteFullVideo"/>
+          <include name="deleteStatistics"/>
         </methods>
-      </class> <!-- Checks.AddBanner -->
+      </class> <!-- Checks.DeleteBanner -->
     </classes>
   </test> <!-- NewHomePage(failed) -->
 </suite> <!-- Failed suite [RegressionSutie] -->
