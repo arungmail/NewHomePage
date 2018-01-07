@@ -113,10 +113,29 @@ public class DeleteBanner extends DriverClass{
 		util.clickOKButtonOnAlertBox();
 	}
 	
+	@Test (priority=15)
+	public void deleteStanderedVideo() throws InterruptedException{
+		driver.findElement(ele.ManageBannerButton).click();
+		WebElement table = driver.findElement(ele.BannerTable);
+		util.editOrDelete("Delete",input.StanderedVideo);
+		util.clickOKButtonOnAlertBox();
+	}
 	
+	@Test (priority=16)
+	public void deleteFullVideo() throws InterruptedException{
+		//driver.findElement(ele.ManageBannerButton).click();
+		WebElement table = driver.findElement(ele.BannerTable);
+		util.editOrDelete("Delete",input.FullVideo);
+		util.clickOKButtonOnAlertBox();
 	
+	}
 	
-	
+	@Test(priority=17)
+	public void deleteGallery () throws InterruptedException{
+		WebElement table = driver.findElement(ele.BannerTable);
+		util.editOrDelete("Delete",input.Gallery);
+		util.clickOKButtonOnAlertBox();
+	}
 	
 	
 	

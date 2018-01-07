@@ -3,7 +3,7 @@
    <test name="NewHomePage">
       <classes>
       <class name="BasePackage.BaseClass" /> 
-      <class name="Checks.DeleteBanner" />   
+      <class name="Checks.AddBanner" />   
        
    </classes>
    </test> 

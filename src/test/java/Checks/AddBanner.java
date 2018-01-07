@@ -3,6 +3,7 @@ package Checks;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -17,10 +18,17 @@ public class AddBanner extends DriverClass{
 	
 	@Test(priority=1)
 	public void login () throws InterruptedException{
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("alert('Test Case Execution Is started Now..');");
 		driver.findElement(ele.Email).sendKeys(input.email);
 		driver.findElement(ele.Password).sendKeys(input.password);
 		driver.findElement(ele.SignInButton).click();
-		Thread.sleep(3000);
+		try{   
+			   driver.switchTo().alert().dismiss();  
+			  }catch(Exception e){ 
+			   System.out.println("unexpected alert not present");   
+			  }
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=2)
@@ -44,10 +52,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
-		
-	
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=3)
@@ -70,8 +77,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=4)
@@ -94,8 +102,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=5)
@@ -118,8 +127,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=6)
@@ -142,8 +152,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=7)
@@ -166,8 +177,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=8)
@@ -190,7 +202,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 
 	@Test(priority=9)
@@ -213,8 +227,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=10)
@@ -237,8 +252,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 
@@ -262,8 +278,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=11)
@@ -286,8 +303,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=12)
@@ -312,8 +330,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	@Test(priority=13)
 	public void addBannerWithoutButton () throws IOException, InterruptedException{
@@ -337,7 +356,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=14)
@@ -365,8 +386,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=15)
@@ -394,8 +416,9 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(status, "ACTIVE");
 		driver.findElement(ele.UploadImageButton).click();
 		util.uploadImages(input.imager);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=16)
@@ -415,9 +438,75 @@ public class AddBanner extends DriverClass{
 		util.selectValueByVisibleText(target, "New Tab");
 		util.selectValueByVisibleText(priority, "4");
 		util.selectValueByVisibleText(status, "ACTIVE");
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
 		
 	}	
 	
+	@Test(priority=17)
+	public void addStanderedVideo () throws InterruptedException{
+		driver.findElement(ele.ManageBannerButton).click();
+		driver.findElement(ele.AddBannerButtton).click();
+		driver.findElement(ele.Title).sendKeys(input.StanderedVideo);
+		driver.findElement(ele.Subtitle).sendKeys("Subtitle ");
+		WebElement type = driver.findElement(ele.SelectType);
+		WebElement bannerType = driver.findElement(ele.SelectBannerType);
+		WebElement target = driver.findElement(ele.SelectTarget);
+		WebElement year = driver.findElement(ele.SelectYear);
+		WebElement priority = driver.findElement(ele.SelectPriority);
+		WebElement status = driver.findElement(ele.SelectStatus);
+		util.selectValueByVisibleText(type, "Video");
+		util.selectValueByVisibleText(bannerType, "Video Standard (Swimindia Home Page Small video)");
+		driver.findElement(ele.URL).sendKeys(input.EmbededStanderedVideoURL);
+		util.selectValueByVisibleText(target, "New Tab");
+		driver.findElement(ele.Description).sendKeys("dsgdsg");
+		util.selectValueByVisibleText(priority, "1");
+		util.selectValueByVisibleText(status, "ACTIVE");
+		driver.findElement(ele.SubmitButton).click();
+		Thread.sleep(5000);
+	}
+	
+	@Test(priority=18)
+	public void addFullVideo (){
+		driver.findElement(ele.AddBannerButtton).click();
+		driver.findElement(ele.Title).sendKeys(input.FullVideo);
+		driver.findElement(ele.Subtitle).sendKeys("Subtitle ");
+		WebElement type = driver.findElement(ele.SelectType);
+		WebElement bannerType = driver.findElement(ele.SelectBannerType);
+		WebElement target = driver.findElement(ele.SelectTarget);
+		WebElement year = driver.findElement(ele.SelectYear);
+		WebElement priority = driver.findElement(ele.SelectPriority);
+		WebElement status = driver.findElement(ele.SelectStatus);
+		util.selectValueByVisibleText(type, "Video");
+		util.selectValueByVisibleText(bannerType, "Full Section Video (Swimindia Home Page )");
+		driver.findElement(ele.URL).sendKeys(input.EmbededStanderedVideoURL);
+		util.selectValueByVisibleText(target, "New Tab");
+		driver.findElement(ele.Description).sendKeys("dsgdsg");
+		util.selectValueByVisibleText(priority, "1");
+		util.selectValueByVisibleText(status, "ACTIVE");
+		driver.findElement(ele.SubmitButton).click();	
+	}
+	
+	@Test (priority=19)
+	public void addGallery () throws InterruptedException{
+		driver.findElement(ele.AddBannerButtton).click();
+		driver.findElement(ele.Title).sendKeys(input.Gallery);
+		driver.findElement(ele.Subtitle).sendKeys("Subtitle ");
+		WebElement type = driver.findElement(ele.SelectType);
+		WebElement bannerType = driver.findElement(ele.SelectBannerType);
+		WebElement target = driver.findElement(ele.SelectTarget);
+		WebElement year = driver.findElement(ele.SelectYear);
+		WebElement priority = driver.findElement(ele.SelectPriority);
+		WebElement status = driver.findElement(ele.SelectStatus);
+		util.selectValueByVisibleText(type, "Gallery");
+		util.selectValueByVisibleText(bannerType, "Gallery - (Facebook Page Gallery - Swimindia Home Page)");
+		driver.findElement(ele.URL).sendKeys("www.swiminidia.in");
+		util.selectValueByVisibleText(target, "New Tab");
+		driver.findElement(ele.Description).sendKeys(input.GalleryURL);
+		util.selectValueByVisibleText(priority, "1");
+		util.selectValueByVisibleText(status, "ACTIVE");
+		driver.findElement(ele.SubmitButton).click();	
+		Thread.sleep(5000);
+	}
 }

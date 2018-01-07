@@ -47,7 +47,7 @@ public class Utility extends DriverClass{
 		return error;
 	}
 	public void uploadImages (String path) throws IOException, InterruptedException{
-		Thread.sleep(1000);
+		//Thread.sleep(5000);
 		Runtime.getRuntime().exec(path);
 	}
 	
